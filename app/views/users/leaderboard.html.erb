@@ -1,0 +1,32 @@
+<center>
+<h1>Leaderboard: Most Ghosts Sighted</h1>
+<% unless User.all.empty? %>
+  <ul class="list-group">
+  <% @rankingshash = {} %>
+
+   <% User.all.each do |user| %>
+    <% @rankingshash["#{user.username}"] = "#{user.ghosts.length.to_i}" %>
+   <br>
+  <% end %> 
+  <% @sortedhash = @rankingshash.sort_by {|k, v| v}.reverse %>
+  <%= ranking = 0 %>
+
+  <% @sortedhash.each do |key, value| %>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+    <% user = User.all.find_by(username: key) %>
+    <a href='/users/<%= user.id %>'><%= user.username %></a>
+    <%= value %> ghosts sighted
+
+    <span class="badge badge-primary badge-pill">ranking</span>
+    <%= ranking += 1 %>
+
+  </li>
+   <br>
+  <% end %> 
+
+  </ul>
+
+<% else %>
+  <p>This site has no users for the board yet!</p>
+<% end %> 
+</center> 
