@@ -3,7 +3,7 @@ class GhostsController < ApplicationController
       city = City.find_by(id: params[:city_id])
       identical = !!city.ghosts.detect { |ghost| ghost.content == params[:content] || ghost.name == params[:name] }
       if params.values.any?(&:empty?) 
-        redirect "/cities/#{params[:city_id]}?error=Invalid_submission_please_try_again:"     
+        redirect "/cities/#{params[:city_id]}?error=Invalid submission please try again:"     
       elsif identical
         redirect "/cities/#{params[:city_id]}?error=Ghost already exists, please try again:"     
       elsif 
