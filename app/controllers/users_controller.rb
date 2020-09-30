@@ -37,6 +37,9 @@ class UsersController < ApplicationController
       erb :'/users/all.html'
     end
   
+    get '/leaderboard' do
+      erb :'/users/leaderboard.html'
+    end
   
     post '/signup' do
       identical = !!User.all.detect { |user| user.username == params[:username] || user.email == params[:email] }
@@ -59,3 +62,4 @@ class UsersController < ApplicationController
     end
   
   end
+  
