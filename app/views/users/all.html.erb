@@ -1,0 +1,15 @@
+<center>
+<h1>Users</h1>
+<% unless User.all.empty? %>
+<ul class="list-unstyled card-columns">
+
+   <% User.all.each do |user| %>
+
+    <a href='/users/<%= user.id %>'><%= user.id %>. <%= user.username %></a>
+   <br>
+  <% end %> 
+  </ul>
+
+<% else %>
+  <p>This site has no users yet!</p>
+<% end %> 
