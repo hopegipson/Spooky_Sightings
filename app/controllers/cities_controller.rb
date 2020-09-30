@@ -1,5 +1,6 @@
 class CitiesController < ApplicationController
     get '/cities/new' do
+      @errormessage = ""
       erb :'/cities/new.html'
     end
   
@@ -7,8 +8,12 @@ class CitiesController < ApplicationController
         city = City.new(name: params[:name], state: params[:state])
         identical = !!City.all.detect { |city| city.name == params[:name] && city.state == params[:state]}
   
-        if params.values.any?(&:empty?) || identical
-         redirect '/cities/new'
+        if params.values.any?(&:empty?)
+          @errormessage = "Invalid Submission, Please Try Again"
+         erb :'/cities/new.html'
+        elsif identical
+          @errormessage = "City Already Exists on Site, Try Another"
+          erb :'/cities/new.html'
         else
             city.save
             redirect "/cities/#{city.id}"
@@ -16,8 +21,10 @@ class CitiesController < ApplicationController
     end
   
     get '/cities/:id' do
+      @error = params[:error]
       @city = City.find_by(id: params[:id])
       @ghosts = @city.ghosts
+      @errormessage = ""
   
       if @city
         erb :'/cities/show.html'

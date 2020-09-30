@@ -3,7 +3,7 @@ class CreateGhosts < ActiveRecord::Migration
     create_table :ghosts do |t|
       t.string :name
       t.string :content
-      t.string :creator_id
+      t.string :user_id
 
       t.timestamps null: false
     end

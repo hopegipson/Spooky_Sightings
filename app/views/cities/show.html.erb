@@ -5,8 +5,8 @@
 <ul class="list-unstyled card-columns">
 
    <% @city.ghosts.each do |ghost| %>
-    <% userid = ghost.creator_id %>
-    <% user= User.find_by(id: ghost.creator_id) %>
+    <% userid = ghost.user.id %>
+    <% user= User.find_by(id: ghost.user.id) %>
 
 
       <div class="bs-component">
@@ -59,9 +59,8 @@ NO SPOTS SUBMITTED YET
 
 
   <h4>Add a new haunted spot!</h4>
-  <% if @error %>
-    <p><%=@error%></p>
-  <% end %>
+  <p class="text-danger"><%= @error %></p>
+
 
   <input type='hidden' name='city_id' value='<%=@city.id%>'> 
     <br>

@@ -2,11 +2,13 @@ class GhostsController < ApplicationController
     post '/ghosts' do
       city = City.find_by(id: params[:city_id])
       identical = !!city.ghosts.detect { |ghost| ghost.content == params[:content] || ghost.name == params[:name] }
-      if params.values.any?(&:empty?) || identical
-        redirect "/cities/#{params[:city_id]}"        
+      if params.values.any?(&:empty?) 
+        redirect "/cities/#{params[:city_id]}?error=Invalid_submission_please_try_again:"     
+      elsif identical
+        redirect "/cities/#{params[:city_id]}?error=Ghost already exists, please try again:"     
       elsif 
             @ghost = Ghost.new( name: params[:name], content: params[:content])
-            @ghost.creator_id = session[:user_id]
+            @ghost.user = current_user
             @ghost.users << User.find_by(id: session[:user_id])
             @ghost.cities << City.find(params[:city_id])
             @ghost.save
@@ -36,7 +38,8 @@ class GhostsController < ApplicationController
   
     get '/ghosts/:id/edit' do    
       @ghost = Ghost.find(params[:id])
-      @ghostuser = User.find_by(id: @ghost.creator_id)
+      @ghostuser = User.find_by(id: @ghost.user.id)
+
   
       if @ghostuser != current_user
         redirect :login
@@ -53,7 +56,7 @@ class GhostsController < ApplicationController
   
     delete '/ghosts/:id/delete' do
       ghost = Ghost.find_by(id: params[:id])
-      ghost.destroy if ghost.creator_id.to_i == current_user.id
+      ghost.destroy if ghost.user.id.to_i == current_user.id
       redirect "/users/#{current_user.id}"
     end
   
