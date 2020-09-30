@@ -1,0 +1,22 @@
+<h1>Haunted Spots visited by <%= @user.username %>!</h1>
+
+<% unless @ghosts.empty? %> 
+  <% @ghosts.each do |ghost| %>
+    <% city = ghost.cities.first%>
+    <p>Your sighting in: <a href='/cities/<%= city.id %>'><%= city.name %></a></p>
+    <p><%= ghost.name%>:    <%= ghost.content%> </p>
+    <% if current_user && ghost.creator_id.to_i == current_user.id %>
+      <div class='current_user_actions_ghost_<%=ghost.id%>'>
+        <a href='/ghosts/<%= ghost.id %>/edit'>edit ghost</a>
+        <form method='post' action='/ghosts/<%= ghost.id %>/delete'>
+          <input type='hidden' name='_method' value='delete'>
+          <input type='submit' name='delete' value='delete ghost'>
+        </form>
+      </div>
+    <% end %>
+    <hr>
+  <% end %> 
+<% else %>
+  <p><%= @user.username %> hasn't visited any ghosts yet!</p>
+<% end %> 
+
