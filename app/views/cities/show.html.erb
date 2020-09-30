@@ -6,8 +6,7 @@
 
    <% @city.ghosts.each do |ghost| %>
     <% userid = ghost.creator_id %>
-    <% user = @creators.select.first { |creator| creator.id == userid.to_i } %>
-
+    <% user= User.find_by(id: ghost.creator_id) %>
 
 
       <div class="bs-component">

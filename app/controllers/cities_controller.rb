@@ -21,10 +21,6 @@ class CitiesController < ApplicationController
       @ghosts = @city.ghosts
   
       if @city
-        if @ghosts != nil
-          @creators= @ghosts.map { |ghost| user_id = ghost[:creator_id]
-          User.all.find_by(user_id)}    
-        end
         erb :'/cities/show.html'
       else
        redirect :'cities/new' 
