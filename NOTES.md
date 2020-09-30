@@ -1,7 +1,7 @@
 NEED TO ADD YOUTUBE LINK TO README
-ADD GITIGNORE FILE
-DOTENV GEM (AND INSTRUCTIONS FOR DOTENV GEM)
+Make it so you can't make cities that are the same
 Figure out how to credit
+Maybe add some error messages, maybe separate city and state
 
 Nashville Hauntings:
 https://nashvilleghosts.com/top-10-most-haunted-places-in-nashville/
@@ -26,6 +26,8 @@ https://www.tripsavvy.com/the-most-haunted-places-in-atlanta-4098824?utm_campaig
 New Orleans Hauntings:
 https://www.10best.com/interests/explore/most-haunted-places-new-orleans-ghost-tour-guides/
 
+Kansas City Hauntings:
+https://fox4kc.com/news/paranormal-investigator-says-tour-of-arrowhead-stadium-turned-up-negative-energy-spirits/
 
 
 

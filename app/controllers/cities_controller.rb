@@ -4,12 +4,11 @@ class CitiesController < ApplicationController
     end
   
     post '/cities' do
-        city = City.new(name: params[:name])
+        city = City.new(name: params[:name], state: params[:state])
+        identical = !!City.all.detect { |city| city.name == params[:name] && city.state == params[:state]}
   
-        if params.values.any?(&:empty?)
+        if params.values.any?(&:empty?) || identical
          redirect '/cities/new'
-        elsif City.find_by(name: params[:name])
-            redirect "/cities/#{city.id}"
         else
             city.save
             redirect "/cities/#{city.id}"

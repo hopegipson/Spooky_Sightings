@@ -1,13 +1,14 @@
 # Add seed data here. Seed your database with `rake db:seed`
-nashville = City.create(name: "Nashville, Tennessee")
-denver = City.create(name: "Denver, Colorado")
-grand_junction = City.create(name: "Grand Junction, Colorado")
-garden_city = City.create(name: "Garden City, Kansas")
-hastings = City.create(name: "Hastings, Nebraska")
-atlanta = City.create(name: "Atlanta, Georgia")
-new_orleans = City.create(name: "New Orleans, Louisiana")
-kansas_city = City.create(name: "Kansas City, Missouri")
-baltimore = City.create(name: "Baltimore, Maryland")
+nashville = City.create(name: "Nashville", state: "Tennessee")
+denver = City.create(name: "Denver", state: "Colorado")
+grand_junction = City.create(name: "Grand Junction", state: "Colorado")
+garden_city = City.create(name: "Garden City", state: "Kansas")
+hastings = City.create(name: "Hastings", state: "Nebraska")
+atlanta = City.create(name: "Atlanta", state: "Georgia")
+new_orleans = City.create(name: "New Orleans", state: "Louisiana")
+kansas_city = City.create(name: "Kansas City", state: "Missouri")
+kansas_city2 = City.create(name: "Kansas City", state: "Kansas")
+
 
 
 
