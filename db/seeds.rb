@@ -55,7 +55,6 @@ ghost6.save
 
 
 
-
 ghost7 = Ghost.create(name: "Hotel Teatro", content: "Today, guests report sightings of the tool man, a former mechanic who once worked on railcars in the building's basement. Since his tragic death during a work-related accident, he's been spotted, tools in hand, wandering the halls of the building.", creator_id: 2)
 ghost7.users << henry
 ghost7.cities << denver
@@ -86,6 +85,8 @@ ghost12.users << henry
 ghost12.cities << denver
 ghost12.save
 
+
+
 ghost13 = Ghost.create(name: "Melrose Hotel", content: "A historic hotel plagued by dark spirits in Grand Junction, CO. The vicious entities seem to target only men and may have even been responsible for a brutal murder involving the hotel's previous owners.", creator_id: 3)
 ghost13.users << faith
 ghost13.cities << grand_junction
@@ -111,3 +112,87 @@ ghost17.users << faith
 ghost17.cities << grand_junction
 ghost17.save
 
+
+
+ghost18 = Ghost.create(name: "Valley View Cemetery", content: "One popular local ghost story is about a boy who died and has a car engine mounted to his headstone at Valley View Cemetery. Some say that at night, you can hear the engine running.", creator_id: 4)
+ghost18.users << curtis
+ghost18.cities << garden_city
+ghost18.save
+
+ghost19 = Ghost.create(name: "Windsor Hotel", content: "Paranormal investigators claimed they saw “transparent feet” and recorded sounds that resembled laughter.", creator_id: 4)
+ghost19.users << curtis
+ghost19.cities << garden_city
+ghost19.save
+
+ghost20 = Ghost.create(name: "Shrivers Motor Office", content: "At the old Shrivers Motors office just west of Stevens Park, there are stories about a father that kept his children upstairs and wouldn’t let them down and they starved to death. The children’s ghosts are said to appear from time to time.", creator_id: 4)
+ghost20.users << curtis
+ghost20.cities << garden_city
+ghost20.save
+
+
+
+ghost21 = Ghost.create(name: "Hastings College", content: "The music hall at this college is said to be haunted by a ghostly music professor. He has appeared as an apparition or an orb, and has been blamed for turning the lights on and off. Altman Hall is also believed to be haunted, by namesake Clara Altman, who acts as a guardian angel for the students who reside there.", creator_id: 5)
+ghost21.users << coni
+ghost21.cities << hastings
+ghost21.save
+
+ghost22 = Ghost.create(name: "The Peterson House", content: " The house itself was probably built in the 1920's, and was rented out to various people, throughout the years. History Behind Manifestation: In the 1930's a young woman, by the name of Anna C. Peterson, rented a room here, as she was employed in the laundry room of Mary Lanning Hospital. It is said she never left.", creator_id: 5)
+ghost22.users << coni
+ghost22.cities << hastings
+ghost22.save
+
+
+ghost23 = Ghost.create(name: "The Fox Theatre", content: "Originally intended to be a Masonic lodge, the 250,000-square-foot theater has seen a host of cast members, staff, and visitors over the years, which is bound to lead to hauntings. It’s also rumored that the site of the theater served as Confederate ammunition cache during the Civil War.", creator_id: 6)
+ghost23.users << cay
+ghost23.cities << atlanta
+ghost23.save
+
+ghost24 = Ghost.create(name: "Oakland Cemetery", content: "Although it’s the final resting place for generations of Atlantans, including city leaders, Civil War soldiers, and celebrities, it’s also strikingly beautiful with gardens, winding paths, and a killer view of the city.", creator_id: 6)
+ghost24.users << cay
+ghost24.cities << atlanta
+ghost24.save
+
+ghost25 = Ghost.create(name: "Downtown Lawrenceville", content: " Rumor has it, a woman died there in the early 1900s and is known to now throw dishes around—which would certainly make her a contender for the worst wedding guest.", creator_id: 6)
+ghost25.users << cay
+ghost25.cities << atlanta
+ghost25.save
+
+ghost26 = Ghost.create(name: "Marietta Museum of History", content: "Although it’s now a museum, the house has worn many hats—most notably being a hospital and a morgue during the Civil War. Reports of wartime hospital rooms materializing in the basement float around along with a ghostly female figure on video and orbs on security footage.", creator_id: 6)
+ghost26.users << cay
+ghost26.cities << atlanta
+ghost26.save
+
+ghost27 = Ghost.create(name: "The Ellis Hotel", content: "With no fire doors, alarms, or sprinklers, the hotel went up in flames and took with it the lives of 119 people. Since that tragic event the hotel has been refurbished and brought up to safety codes as the Ellis Hotel, but the spirits of those that perished in the fire still linger.", creator_id: 6)
+ghost27.users << cay
+ghost27.cities << atlanta
+ghost27.save 
+
+ghost28 = Ghost.create(name: "Bulloch Hall", content: "Said to be haunted by a teenage girl who was a slave on the plantation during the war and fell (or possibly thrown) into a well in the backyard. Her apparition can be seen occasionally along with electrical disturbances.", creator_id: 6)
+ghost28.users << cay
+ghost28.cities << atlanta
+ghost28.save 
+
+
+
+ghost29 = Ghost.create(name: "Le Petit Theatre", content: "After a time, the eye of the producer moved to another young girl and she found herself demoted to lesser roles. As vengeance, she hung herself in the middle of the opening night performance of the largest production of the season. Legend says she continues to appear to the audience each opening night as a shadowy form hanging against the backdrop of the stage. Break a leg...or neck!", creator_id: 7)
+ghost29.users << blake
+ghost29.cities << new_orleans
+ghost29.save 
+
+ghost30 = Ghost.create(name: "734 Royal Street", content: "Late 19th century New Orleans was a city of duality, and no one was more aware of that than Julie, a free woman of color, and Michi, the Frenchman whom she loved. Julie had been pressuring him to marry her, and one December night, Michi snapped. In a fit of frustration, he issued an ultimatum in jest: Julie was to prove her love for him by stripping naked and waiting for him on the roof – where he later found her, disrobed and frozen solid. It is said she still waits there.", creator_id: 7)
+ghost30.users << blake
+ghost30.cities << new_orleans
+ghost30.save 
+
+ghost31 = Ghost.create(name: "Saint Roch Cemetery", content: "Two apparitions haunt the cemetery: a cloaked figure known for walking through walls, and a large, unearthly black dog. Saint Roch is, curiously, also the patron saint of dogs. This well-maintained city of the dead, like all cemeteries in New Orleans, exudes a haunting tranquility, its tombs gleaming bone-white in the sun.", creator_id: 7)
+ghost31.users << blake
+ghost31.cities << new_orleans
+ghost31.save 
+
+
+
+ghost32 = Ghost.create(name: "Arrowhead Stadium", content: "Hauntings reported located in the same general area where a man was killed during a 1972 crane collapse during stadium construction. Could also be haunted by all the teams the Chiefs killed on the field.", creator_id: 8)
+ghost32.users << patrick
+ghost32.users << travis
+ghost32.cities << kansas_city
+ghost32.save 
