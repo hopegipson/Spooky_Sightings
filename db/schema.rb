@@ -11,34 +11,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200930042215) do
-
-  create_table "cities", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "ghosts", force: :cascade do |t|
-    t.string "name"
-    t.string "content"
-    t.string "creator_id"
-  end
-
-  create_table "user_ghosts", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "ghost_id"
-    t.integer  "city_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string   "username"
-    t.string   "email"
-    t.string   "password_digest"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-  end
+ActiveRecord::Schema.define(version: 0) do
 
 end

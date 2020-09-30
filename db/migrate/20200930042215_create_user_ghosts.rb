@@ -1,4 +1,4 @@
-class CreateUserghosts < ActiveRecord::Migration
+class CreateUserGhosts < ActiveRecord::Migration
   def change 
     create_table :user_ghosts do |t|
       t.integer :user_id
