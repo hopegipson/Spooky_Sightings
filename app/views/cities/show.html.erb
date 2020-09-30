@@ -1,0 +1,78 @@
+<center>
+
+<h1><%= @city.name %></h1>
+<% unless @city.ghosts.empty? %>
+<ul class="list-unstyled card-columns">
+
+   <% @city.ghosts.each do |ghost| %>
+    <% userid = ghost.creator_id %>
+    <% user = @creators.select.first { |creator| creator.id == userid.to_i } %>
+
+
+
+      <div class="bs-component">
+      <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+      <div class="card-header">Submitted by: <a href='/users/<%= user.id %>'><%= user.username %></a> </div>
+          <div class="card-body">
+            <h4 class="card-title"><%= ghost.name%> </h4>
+            <p class="card-text"><%= ghost.content%> 
+            <br>
+            Sighted by <%= ghost.users.count%> users
+            </p>
+            <% if user == current_user %>
+            <div class='current_user_actions_ghost_<%=ghost.id%>'>
+              <a href='/ghosts/<%= ghost.id %>/edit'>edit ghost</a>
+              <form method='post' action='/ghosts/<%= ghost.id %>/delete'>
+                <input type='hidden' name='_method' value='delete'>
+                <input type='submit' name='delete' value='delete ghost'>
+              </form>
+            </div>
+          <% end %>
+          </div>
+        </div>
+    <hr>
+  <% end %> 
+  </ul>
+
+<% else %>
+  <p><%= @city.name %> has no hauntings yet!</p>
+<% end %> 
+
+<% if logged_in? %>
+
+<form method='post' action='/ghostscheck'>
+<h3>Have you been to any of these spots?</h3>
+
+<% @ghosts.each do |ghost| %>
+  <input type="checkbox" name="user[ghost_ids][]" id="<%= ghost.id %>" value="<%= ghost.id %>"><%= ghost.name %></input><br>
+<% end %>
+<br />
+<% if @ghosts.empty? %>
+NO SPOTS SUBMITTED YET
+<% else %>
+<input type='submit' value='I saw one of these> 
+
+<% end %>
+
+</form>
+
+<form method='post' action='/ghosts'>
+
+
+  <h4>Add a new haunted spot!</h4>
+  <% if @error %>
+    <p><%=@error%></p>
+  <% end %>
+
+  <input type='hidden' name='city_id' value='<%=@city.id%>'> 
+    <br>
+    <label>Name of Haunted Spot:</label><br>
+    <input type='text' name='name'><br>
+    <label>Description:</label><br>
+    <input type='text' name='content'><br>
+    <input type='submit' value='Submit a new haunting'>
+    </form>
+    <% else %>
+  <p>Log in to add a haunting!</p>
+<% end %>
+</center> 
