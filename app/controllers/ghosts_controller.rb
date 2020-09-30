@@ -3,7 +3,6 @@ class GhostsController < ApplicationController
       city = City.find_by(id: params[:city_id])
       identical = !!city.ghosts.detect { |ghost| ghost.content == params[:content] || ghost.name == params[:name] }
       if params.values.any?(&:empty?) || identical
-        #need to create city show page
         redirect "/cities/#{params[:city_id]}"        
       elsif 
             @ghost = Ghost.new( name: params[:name], content: params[:content])
@@ -30,6 +29,9 @@ class GhostsController < ApplicationController
     end
   end
   
+  get '/ghosts/leaderboard' do
+    erb :'/ghosts/leaderboard.html'
+  end
   
   
     get '/ghosts/:id/edit' do    
