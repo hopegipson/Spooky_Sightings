@@ -1,0 +1,9 @@
+<h1>Edit your ghost sighting!</h1>
+<form method='post' action='/ghosts/<%= @ghost.id %>'>
+    <input type='hidden' id='hidden' name='_method' value='patch'> 
+    <label>Name:</label><br>
+    <input type='text' name='name' value='<%= @ghost.name %>'><br>
+    <label>Content:</label><br>
+    <input type='text' name='content' value='<%= @ghost.content %>'><br>
+    <input type='submit' value='update'>
+  <form>
