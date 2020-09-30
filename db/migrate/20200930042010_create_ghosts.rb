@@ -4,6 +4,8 @@ class CreateGhosts < ActiveRecord::Migration
       t.string :name
       t.string :content
       t.string :creator_id
+
+      t.timestamps null: false
     end
   end
 end
