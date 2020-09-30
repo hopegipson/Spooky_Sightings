@@ -13,6 +13,8 @@ Add this line to your application's Gemfile:
     $ git clone https://github.com/hopegipson/ghost-sightings.git
     $ bundle install
 
+User will also need to add an environmental variable to system or add a .env file to root file of directory to save ENV['SECRET_KEY'].
+
 ## Usage
 
 Run:
