@@ -1,2 +1,12 @@
-<h1> Ghost Sighting Checklist </h1>
-<h2> Pick a City: </h2>
+<h1>Ghost Sighting Checklist</h1> 
+<h2>Pick a City:</h2> 
+ <ul style='columns: 4'>
+  <% @cities.each do |city| %>
+    <button type="button" class="btn btn-primary btn-lg btn-block"><a href='/cities/<%= city.id %>'><%= city.name %></a></button>
+  <% end %>
+</ul>
+<br>
+<p>Experienced a sighting in another city?</p> 
+<button type="button" class="btn btn-primary"><a href='/cities/new'>Add a city!</a></button>
+
+
