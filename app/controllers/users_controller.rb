@@ -3,9 +3,7 @@ class UsersController < ApplicationController
     get '/login' do
         if logged_in?
             redirect "/users/#{current_user.id}"
-            #redirect to the current user page
         else
-            #redirect to your login view form
             erb:'/users/login.html'
         end
     end
@@ -14,7 +12,6 @@ class UsersController < ApplicationController
         user = User.find_by(username: params[:username])
         if user && user.authenticate(params[:password])
             session [:user_id] = user.id
-            #going to need to make a users show page for each id call
             redirect "/users/#{user.id}"
         else
             redirect "/login"
