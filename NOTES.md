@@ -1,7 +1,4 @@
-NEED TO ADD YOUTUBE LINK TO README
-Make it so you can't make cities that are the same
-Figure out how to credit
-Maybe add some error messages, maybe separate city and state
+Resources Utilized in coming up with Seed Materials:
 
 Nashville Hauntings:
 https://nashvilleghosts.com/top-10-most-haunted-places-in-nashville/
