@@ -6,7 +6,7 @@ class GhostsController < ApplicationController
         redirect "/cities/#{params[:city_id]}?error=Invalid submission please try again:"     
       elsif identical
         redirect "/cities/#{params[:city_id]}?error=Ghost already exists, please try again:"     
-      elsif 
+      else
             @ghost = Ghost.new( name: params[:name], content: params[:content])
             @ghost.user = current_user
             @ghost.users << User.find_by(id: session[:user_id])
