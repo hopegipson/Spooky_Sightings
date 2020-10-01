@@ -42,7 +42,6 @@
    --font-family-sans-serif: "Neucha", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
  }
- 
  *,
  *::before,
  *::after {
@@ -60,6 +59,7 @@
  article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
    display: block;
  }
+
  
  body {
    margin: 100;

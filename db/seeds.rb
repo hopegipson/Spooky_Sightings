@@ -30,7 +30,7 @@ ghost1.cities << nashville
 ghost1.save
 
 ghost2 = Ghost.create(name: "The Hermitage", content: "Many people state that they see a man who fits the description of Mr. Jackson wandering around the halls.", user: hope)
-ghost1.users << hope
+ghost2.users << hope
 ghost2.cities << nashville
 ghost2.save
 
