@@ -21,7 +21,6 @@ Run:
 
     $ rake db:migrate
     $ rake db:seed
-    $ rake db:migrate SINATRA_ENV=test
     $ shotgun
 
 The app will be using localhost:9393 by default.
