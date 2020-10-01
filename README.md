@@ -4,7 +4,7 @@
 This Sinatra Application allows Users to submit haunted spots/ghost sightings to a city's directory of hauntings. Users can also verify they have been to a haunted spot another user has submitted, and add it to their own list of user list of spots they've visited. A leaderboard tracks which users have experienced the most ghost sightings, and an alternate leaderboard tracks which spots are the most haunted (have had the most sightings by ghostsightings users).
 
 
-To watch a demo of the Sinatra CRUD Application in action you can visit 
+To watch a demo of the Sinatra CRUD Application in action you can visit https://youtu.be/oY3aO2vWym0
 
 ## Installation
 
