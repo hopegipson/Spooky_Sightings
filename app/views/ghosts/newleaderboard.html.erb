@@ -1,0 +1,26 @@
+<center>
+
+
+<h1>Leaderboard: Where ghosts that are bad at hiding/sighted most</h1>
+<% unless Ghost.all.empty? %>
+  <ul class="list-group">
+
+  <% Ghost.sorted_by_ghosts.each_with_index do |ghost, index| %>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+    <a href='/cities/<%= ghost.cities.first.id %>'><%= ghost.name %></a>
+    <%= ghost.users.length %> ghosts sighted
+
+
+    <span class="badge badge-primary badge-pill">ranking</span>
+    <%= index %>
+
+  </li>
+   <br>
+  <% end %> 
+
+  </ul>
+
+<% else %>
+  <p>This site has no ghosts for the board yet!</p>
+<% end %> 
+</center> 

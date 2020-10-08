@@ -1,5 +1,6 @@
 class GhostsController < ApplicationController
-    post '/ghosts' do
+
+  post '/ghosts' do
       city = City.find_by(id: params[:city_id])
       identical = !!city.ghosts.detect { |ghost| ghost.content == params[:content] || ghost.name == params[:name] }
       if params.values.any?(&:empty?) 
@@ -19,13 +20,18 @@ class GhostsController < ApplicationController
   post '/ghostscheck' do
     if params[:user] != nil
       user = params[:user]
-      @ghost = Ghost.find_by(id: user["ghost_ids"])
-      if current_user.ghosts.find_by(name: @ghost.name)
-      redirect "/users/#{current_user.id}"
-      else
-      @ghost.users << User.find_by(id: session[:user_id])
-      redirect "/users/#{current_user.id}"
+      @ghosts = []
+      user["ghost_ids"].each do |number|
+        @ghost = Ghost.find_by(id: number)
+        @ghosts << @ghost
       end
+      @ghosts.each do |ghost|
+          if current_user.ghosts.find_by(name: ghost.name)
+          else
+          ghost.users << User.find_by(id: session[:user_id])
+          end
+      end
+        redirect "/users/#{current_user.id}"
     else
       redirect "/users/#{current_user.id}"
     end
@@ -34,27 +40,34 @@ class GhostsController < ApplicationController
   get '/ghosts/leaderboard' do
     erb :'/ghosts/leaderboard.html'
   end
+
+  get '/ghosts/newleaderboard' do
+    erb :'/ghosts/newleaderboard.html'
+  end
   
   
-    get '/ghosts/:id/edit' do    
+  get '/ghosts/:id/edit' do    
       @ghost = Ghost.find(params[:id])
       @ghostuser = User.find_by(id: @ghost.user.id)
 
-  
       if @ghostuser != current_user
         redirect :login
       else
         erb :'/ghosts/edit.html'
       end
-    end
+  end
   
-    patch '/ghosts/:id' do
+  patch '/ghosts/:id' do
       ghost = Ghost.find(params[:id])
-      ghost.update(name: params[:name], content: params[:content])
-      redirect "/users/#{current_user.id}"
-    end
+      if ghost.user.id.to_i == current_user.id
+         ghost.update(name: params[:name], content: params[:content])
+         redirect "/users/#{current_user.id}"
+      else
+        redirect "/users/#{current_user.id}?error=Not your ghost selected"
+      end
+  end
   
-    delete '/ghosts/:id/delete' do
+  delete '/ghosts/:id/delete' do
       ghost = Ghost.find_by(id: params[:id])
       ghost.destroy if ghost.user.id.to_i == current_user.id
       redirect "/users/#{current_user.id}"

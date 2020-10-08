@@ -7,4 +7,5 @@ use Rack::MethodOverride
 use CitiesController
 use GhostsController
 use UsersController
+use RackSessionAccess::Middleware if ENV['SINATRA_ENV'] == 'test'
 run ApplicationController

@@ -1,4 +1,5 @@
 <h1>Haunted Spots visited by <%= @user.username %>!</h1>
+<p class="text-danger"><%= @error %></p>
 
 <% unless @ghosts.empty? %> 
   <% @ghosts.each do |ghost| %>

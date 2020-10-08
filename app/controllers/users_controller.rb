@@ -20,6 +20,7 @@ class UsersController < ApplicationController
     end
   
     get '/users/:id' do
+      @error = params[:error]
       @user = User.find_by(id: params[:id])
       redirect back unless @user
       @ghosts = @user.ghosts
