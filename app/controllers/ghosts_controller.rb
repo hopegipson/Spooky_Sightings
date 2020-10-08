@@ -20,17 +20,12 @@ class GhostsController < ApplicationController
   post '/ghostscheck' do
     if params[:user] != nil
       user = params[:user]
-      @ghosts = []
       user["ghost_ids"].each do |number|
-        @ghost = Ghost.find_by(id: number)
-        @ghosts << @ghost
-      end
-      @ghosts.each do |ghost|
-          if current_user.ghosts.find_by(name: ghost.name)
-          else
-          ghost.users << User.find_by(id: session[:user_id])
-          end
-      end
+        ghost = Ghost.find_by(id: number)
+        if !current_user.ghosts.find_by(name: ghost.name)
+             ghost.users << current_user
+         end
+        end
         redirect "/users/#{current_user.id}"
     else
       redirect "/users/#{current_user.id}"
