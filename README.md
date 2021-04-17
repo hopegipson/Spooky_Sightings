@@ -3,6 +3,8 @@
 # Spooky Sightings
 
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/hopegipson/Spooky_Sightings) 
+![GitHub language count](https://img.shields.io/github/languages/count/hopegipson/Spooky_Sightings) 
+![GitHub top language](https://img.shields.io/github/languages/top/hopegipson/Spooky_Sightings)
 ![GitHub contributors](https://img.shields.io/github/contributors/hopegipson/Spooky_Sightings)
 ![GitHub issues](https://img.shields.io/github/issues-raw/hopegipson/Spooky_Sightings)
 ![GitHub last commit](https://img.shields.io/github/last-commit/hopegipson/Spooky_Sightings)
