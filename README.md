@@ -2,6 +2,16 @@
 
 # Spooky Sightings
 
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/hopegipson/Spooky_Sightings) 
+![GitHub language count](https://img.shields.io/github/languages/count/hopegipson/Spooky_Sightings) 
+![GitHub top language](https://img.shields.io/github/languages/top/hopegipson/Spooky_Sightings)
+![GitHub contributors](https://img.shields.io/github/contributors/hopegipson/Spooky_Sightings)
+![GitHub issues](https://img.shields.io/github/issues-raw/hopegipson/Spooky_Sightings)
+![GitHub last commit](https://img.shields.io/github/last-commit/hopegipson/Spooky_Sightings)
+![GitHub forks](https://img.shields.io/github/forks/hopegipson/Spooky_Sightings?style=social)
+![GitHub Repo stars](https://img.shields.io/github/stars/hopegipson/Spooky_Sightings?style=social) 
+![YouTube Video Views](https://img.shields.io/youtube/views/oY3aO2vWym0?style=social)
+
 This Sinatra Application allows Users to submit haunted spots/ghost sightings to a city's directory of hauntings. Users can also verify they have been to a haunted spot another user has submitted, and add it to their own list of user list of spots they've visited. A leaderboard tracks which users have experienced the most ghost sightings, and an alternate leaderboard tracks which spots are the most haunted (have had the most sightings by ghostsightings users).
 
 
