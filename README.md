@@ -3,8 +3,6 @@
 # Spooky Sightings
 
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/hopegipson/Spooky_Sightings) 
-![GitHub language count](https://img.shields.io/github/languages/count/hopegipson/Spooky_Sightings) 
-![GitHub top language](https://img.shields.io/github/languages/top/hopegipson/Spooky_Sightings)
 ![GitHub contributors](https://img.shields.io/github/contributors/hopegipson/Spooky_Sightings)
 ![GitHub issues](https://img.shields.io/github/issues-raw/hopegipson/Spooky_Sightings)
 ![GitHub last commit](https://img.shields.io/github/last-commit/hopegipson/Spooky_Sightings)
@@ -49,6 +47,12 @@ The app will be using localhost:9393 by default.
 
 Bug reports and pull requests are welcome on GitHub <a href="https://github.com/hopegipson/Spooky_Sightings"/> here.</a>This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/hopegipson/Spooky_Sightings/blob/master/CODE_OF_CONDUCT.md).
 
+    -Fork this repository.
+    -Create a branch: git checkout -b <branch_name>.
+    -Make your changes and commit them: git commit -m '<commit_message>'
+    -Push to the original branch: git push origin Spotify_Clone/master
+    -Create the pull request.
+
 
 ## License
 
@@ -57,3 +61,9 @@ The gem is available as open source under the terms of the [MIT License](https:/
 ## Code of Conduct
 
 Everyone interacting in the HeroBattles project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/hopegipson/Spooky_Sightings/blob/master/CODE_OF_CONDUCT.md).
+
+
+## Languages Used
+
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=hopegipson&layout=compact&theme=radical)](https://github.com/hopegipson/Spooky_Sightings)
+
