@@ -23,7 +23,7 @@ To watch a demo of the Sinatra CRUD Application in action you can visit:
 alt="Demo of Ghost Sighting app" width="240" height="180" border="10" /></a>
 
 Blog Post with Further Explanation on ActiveRecord Relationships/Join Tables in this project:
-<a href="https://hopegipson.github.io/sinatra_crud_application_build_and_learning_more_about_join_tables"/> Here</a>
+<a href="https://thehopegipson.medium.com/building-sinatra-crud-spooky-sightings-application-and-learning-more-about-join-tables-2d5a968864b4"/> Here</a>
 
 ## Installation
 
